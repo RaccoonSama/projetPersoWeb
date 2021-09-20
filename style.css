@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-#menu {
+.menu {
   color: white;
   margin: 0 auto;
   display: flex;
@@ -13,13 +13,13 @@
   width: 90vw;
 }
 
-#menu #logo {
+.menu .logo {
   font-weight: bold;
   font-size: 5rem;
   display: inherit;
 }
 
-#menu ul {
+.menu ul {
   color: white;
   display: flex;
   flex-direction: row;
@@ -29,13 +29,13 @@
   width: 100%;
 }
 
-#menu ul li {
+.menu ul li {
   list-style: none;
   font-weight: bold;
   font-size: 2rem;
 }
 
-#txt-btn {
+.txt_btn {
   margin-bottom: 1.625rem;
   align-self: flex-end;
   display: inherit;
@@ -43,12 +43,12 @@
   align-items: flex-end;
 }
 
-#txt-btn #get-started {
+.txt_btn .get_started {
   justify-self: flex-start;
   align-self: flex-end;
 }
 
-#txt-btn #get-started button {
+.txt_btn .get_started button {
   font-family: 'Urbanist', sans-serif;
   font-weight: bold;
   font-size: 1.3rem;
@@ -61,7 +61,7 @@
   box-shadow: black;
 }
 
-#txt-btn .who-txt {
+.txt_btn .who_txt {
   color: white;
   font-size: 1rem;
   line-height: 2rem;
@@ -79,18 +79,18 @@ header {
   box-shadow: inset 0px 0px 15px 5px #000000;
 }
 
-.under-triangle {
+.under_triangle {
   clip-path: polygon(0 0, 0 56%, 100% 0);
   width: 100%;
   height: 20rem;
   background: linear-gradient(90deg, #3cd976 0%, #34dfaf 35%, #0094b3 100%);
 }
 
-#main-content {
+.main_content {
   display: flex;
 }
 
-#main-content .main-text {
+.main_content .main_text {
   align-self: flex-end;
   font-weight: bold;
   width: 50%;
@@ -100,14 +100,12 @@ header {
   box-shadow: inset 7px 3px 15px 6px #000000;
 }
 
-.side-triangle {
-  border: 1px solid red;
+.side_triangle {
   width: 100%;
   position: relative;
 }
 
-.side-triangle .under-triangle2 {
-  border: 1px solid red;
+.side_triangle .under_triangle2 {
   position: absolute;
   right: 0;
   height: 100%;
@@ -115,4 +113,62 @@ header {
   clip-path: polygon(100% 0, 56% 0, 100% 100%);
   box-shadow: inset 0px 0px 15px 5px #000000;
   background: linear-gradient(90deg, #3cd976 0%, #34dfaf 35%, #0094b3 100%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3ceeaa;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #17ecff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #17ecff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
