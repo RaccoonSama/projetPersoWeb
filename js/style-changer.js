@@ -1,3 +1,4 @@
+var header = document.querySelector('header');
 var allDoc = document.querySelectorAll("div");
 var button = document.getElementById('style-change');
 var change = "-change";
@@ -6,6 +7,7 @@ var regex = '\-.*';
 button.addEventListener("click", ()=> {
     if(button.checked) {
         console.log(button.checked);
+        header.className += "-change";
         for (let i = 0; i < allDoc.length; i++) {
             const element = allDoc[i];
             var Eclass2 = element.className;
@@ -14,6 +16,7 @@ button.addEventListener("click", ()=> {
         }
     }else if(!button.checked){
         console.log(button.checked);
+        header.className = "main_header";
         for (let i = 0; i < allDoc.length; i++) {
             const element = allDoc[i];
             var Eclass = element.className;

@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-.menu {
+.menu, .menu-change {
   color: white;
   margin: 0 auto;
   display: flex;
@@ -13,13 +13,17 @@
   width: 90vw;
 }
 
-.menu .logo {
+.menu .logo, .menu-change .logo {
   font-weight: bold;
   font-size: 5rem;
   display: inherit;
 }
 
-.menu ul {
+.menu .comp_name-change, .menu-change .comp_name-change {
+  display: none;
+}
+
+.menu ul, .menu-change ul {
   color: white;
   display: flex;
   flex-direction: row;
@@ -29,16 +33,26 @@
   width: 100%;
 }
 
-.menu ul li {
+.menu ul li, .menu-change ul li {
   list-style: none;
   font-weight: bold;
   font-size: 2rem;
 }
 
+.menu-change ul li:last-of-type {
+  color: #db00ef;
+}
+
+.txt_btn-change {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
 .txt_btn {
   margin-bottom: 1.625rem;
   align-self: flex-end;
-  display: inherit;
+  display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
 }
@@ -48,27 +62,26 @@
   align-self: flex-end;
 }
 
-.txt_btn .get_started button {
-  font-family: 'Urbanist', sans-serif;
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: white;
-  width: 250px;
-  height: 50px;
-  border-radius: 15px;
-  background-color: #1dee63;
-  border: #093618;
-  box-shadow: black;
-}
-
-.txt_btn .who_txt {
+.txt_btn .who_txt, .txt_btn .who_txt-change {
   color: white;
   font-size: 1rem;
   line-height: 2rem;
   width: 50%;
 }
 
-header {
+.who_txt-change {
+  margin-left: 10%;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.get_started-change {
+  margin-right: 10%;
+}
+
+.main_header {
   border: 1px solid teal;
   background: #3cd976;
   background: linear-gradient(90deg, #3cd976 0%, #34dfaf 35%, #0094b3 100%);
@@ -77,6 +90,16 @@ header {
   flex-direction: column;
   justify-content: space-between;
   box-shadow: inset 0px 0px 15px 5px #000000;
+}
+
+.main_header-change {
+  background-color: #cc2dcc;
+  border-radius: 0  100px 100px 0;
+  width: 80%;
+}
+
+.main_header-change::before {
+  background-color: black;
 }
 
 .under_triangle {
@@ -153,11 +176,11 @@ header {
 }
 
 input:checked + .slider {
-  background-color: #17ecff;
+  background-color: #ff17f3;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #17ecff;
+  box-shadow: 0 0 1px #ff17f3;
 }
 
 input:checked + .slider:before {

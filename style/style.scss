@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
 }
-.menu {
+.menu, .menu-change {
     
     color: white;
     margin: 0 auto;
@@ -15,6 +15,9 @@
         font-weight: bold;
         font-size: 5rem;
         display: inherit;  
+    }
+    .comp_name-change {
+          display: none;
     }
     ul {
         color: white;
@@ -29,32 +32,35 @@
             font-weight: bold;
             font-size: 2rem;
         }
+       
     }
 }
+.menu-change {
+  ul {
+    li:last-of-type {
+      color: invert($color: #24ff10);
+   } 
+  }
+}
 
-.txt_btn {
+.txt_btn-change {
+ // justify-content: right !important;
+width: 100vw ;
+display: flex;
+justify-content: space-between;
+}
+
+.txt_btn{
     margin-bottom: 1.625rem;
     align-self: flex-end;
-    display: inherit;
+    display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
     .get_started {
         justify-self: flex-start;
         align-self: flex-end;
-        button {
-            font-family: 'Urbanist', sans-serif;
-            font-weight: bold;
-            font-size: 1.3rem;
-            color: white;
-            width: 250px;
-            height: 50px;
-            border-radius: 15px;
-            background-color: rgb(29, 238, 99);
-            border: rgb(9, 54, 24);
-            box-shadow: black;
-        }
     }
-    .who_txt {
+    .who_txt, .who_txt-change {
         color: white;
         font-size: 1rem;
         line-height: 2rem;
@@ -62,8 +68,19 @@
         
     }
 }
+.who_txt-change {
+  margin-left: 10%;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.get_started-change {
+    margin-right: 10%;
+}
 
-header {
+
+.main_header {
     border: 1px solid teal;
     background: rgb(60,217,118);
     background: linear-gradient(90deg, rgba(60,217,118,1) 0%, rgba(52,223,175,1) 35%, rgba(0,148,179,1) 100%);
@@ -72,6 +89,14 @@ header {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: inset 0px 0px 15px 5px #000000;
+}
+.main_header-change {
+  background-color: rgb(204, 45, 204);
+  border-radius: 0  100px 100px 0;
+  width: 80%;
+}
+.main_header-change::before {
+  background-color: black;
 }
 
 .under_triangle {
@@ -149,11 +174,11 @@ header {
   }
   
   input:checked + .slider {
-    background-color: #17ecff;
+    background-color: #ff17f3;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #17ecff;
+    box-shadow: 0 0 1px #ff17f3;
   }
   
   input:checked + .slider:before {
